@@ -1,5 +1,7 @@
 package com.clinic.raamish.screen.detailScreen
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -23,6 +25,7 @@ import com.clinic.raamish.models.Patient
 import com.clinic.raamish.ui.theme.HomePageBodyBrightYellow
 import java.time.format.DateTimeFormatter
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun PatientDetailContent(modifier: Modifier, patient: Patient) {
     val formattedModifiedDate = DateTimeFormatter.ofPattern("dd/MM/yyyy h:mm a").format(patient.modifiedDateObj)
