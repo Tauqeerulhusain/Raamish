@@ -1,5 +1,7 @@
 package com.clinic.raamish.screen.detailScreen
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -14,6 +16,7 @@ import androidx.compose.ui.unit.dp
 import com.clinic.raamish.ui.theme.TitleBarDarkYellow
 import com.clinic.raamish.viewmodels.PatientViewModel
 
+@RequiresApi(Build.VERSION_CODES.O)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PatientDetailScreen(patientViewModel: PatientViewModel, onDoubleTap: () -> Unit){

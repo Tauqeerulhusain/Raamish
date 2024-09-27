@@ -1,5 +1,7 @@
 package com.clinic.raamish
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -14,6 +16,7 @@ import com.clinic.raamish.screen.detailScreen.PatientDetailScreenEdit
 import com.clinic.raamish.screen.homeScreen.HomeScreen
 import com.clinic.raamish.viewmodels.PatientViewModel
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun NavigationController(patientViewModel: PatientViewModel){
     val navController = rememberNavController()
